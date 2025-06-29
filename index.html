@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>veronin.dev - Harry Newman</title>
+    <title>veronin.dev</title>
     <style>
       body {
         background-color: #1e1e2e;
@@ -19,6 +19,7 @@
       a {
         color: #66d9ef;
         text-decoration: underline;
+        white-space: nowrap;
       }
 
       a:hover {
@@ -36,15 +37,20 @@
     </style>
   </head>
   <body>
-    <span class="prompt">&gt;</span> <span class="command">whoami</span><br />
+    <span class="prompt">&gt;</span> <span class="command">index</span><br />
+    <span><a href="#about">whoami</a></span>
+
+    <!--About-->
+    <span class="prompt">&gt;</span> <span class="command" id="whoami">whoami</span><br />
     <span>Harry Newman (veronin) - Software Developer</span><br />
     <span id="age"></span><br />
 
-    <span class="prompt">&gt;</span> <span class="command">skills --list</span
-    ><br />
+    <!--Skills-->
+    <span class="prompt">&gt;</span> <span class="command" id="skills">skills --list</span><br />
     <span>C, Python, JavaScript, Git, Linux</span><br /><br />
 
-    <span class="prompt">&gt;</span> <span class="command">projects</span><br />
+    <!--Projects-->
+    <span class="prompt">&gt;</span> <span class="command" id="projects">projects</span><br />
     <span
       ><a
         href="https://github.com/veronin1/boots/"
@@ -62,14 +68,14 @@
       >: Data structures &amp; algorithms implementations</span
     ><br /><br />
 
-    <span class="prompt">&gt;</span> <span class="command">certifications</span
-    ><br />
+    <!--Certifications-->
+    <span class="prompt">&gt;</span> <span class="command" id="certifications">certifications</span><br />
     <span>- CS50x: Introduction to Computer Science (Jun 2025)</span><br />
     <span>- CS50P: Introduction to Programming with Python (May 2025)</span
     ><br /><br />
 
-    <span class="prompt">&gt;</span> <span class="command">education</span
-    ><br />
+    <!--Education-->
+    <span class="prompt">&gt;</span> <span class="command" id="education">education</span><br />
     <span>BSc (Hons) Computer Science @ Aston University (Current)</span><br />
     <span>Level 4 HNC Computing (Sep 2024 - Jun 2025): <b>Merit</b></span
     ><br />
@@ -77,28 +83,11 @@
       >Level 3 Diploma in Computing (Sep 2022 - Jun 2024) - <b>D*D*D</b></span
     ><br />
 
-    <span class="prompt">&gt;</span> <span class="command">contact</span><br />
-    <span
-      >Email:
-      <a href="mailto:h.newman2005@outlook.com"
-        >h.newman2005@outlook.com</a
-      ></span
-    ><br />
-    <span
-      >GitHub:
-      <a
-        href="https://github.com/veronin1"
-        target="_blank"
-        rel="noopener noreferrer"
-        >github.com/veronin1</a
-      ></span
-    ><br />
-    <span
-      >Website:
-      <a href="https://veronin.dev" target="_blank" rel="noopener noreferrer"
-        >veronin.dev</a
-      ></span
-    ><br />
+    <!--Contact-->
+    <span class="prompt">&gt;</span> <span class="command" id="contact">contact</span><br />
+    <span>Email: <a href="mailto:h.newman2005@outlook.com">h.newman2005@outlook.com</a></span><br />
+    <span>GitHub: <a href="https://github.com/veronin1" target="_blank" rel="noopener noreferrer">github.com/veronin1</a></span><br />
+    <span>Website: <a href="https://veronin.dev" target="_blank" rel="noopener noreferrer">veronin.dev</a></span><br />
 
     <span class="prompt">&gt;</span> <span class="command">timenow</span><br />
     <span id="timenow"></span>
