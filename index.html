@@ -11,6 +11,19 @@
         color: white;
         background-color: black;
       }
+
+      a,
+      a:visited {
+        color: #00aaff;
+        text-decoration: underline;
+      }
+
+      .hr-style {
+        border: none;
+        height: 2px;
+        background-color: white;
+        margin: 20px 0;
+      }
     </style>
   </head>
   <body>
@@ -22,62 +35,116 @@
               <th align="left" id="section-header">[001] About</th>
             </tr>
           </thead>
-
-          <tr>
-            <th align="left">Name:</th>
-            <td>Harry Newman</td>
-          </tr>
-          <tr>
-            <th align="left">Age:</th>
-            <td id="age"></td>
-          </tr>
-          <tr>
-            <th align="left">Type:</th>
-            <td>Software Developer</td>
-          </tr>
-          <tr>
-            <th align="left">Education:</th>
-            <td>
-              Studying BSc (Hons) Computer Science @
-              <a
-                href="https://www.aston.ac.uk/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Aston University
-              </a>
-            </td>
-          </tr>
+          <tbody>
+            <tr>
+              <th align="left">Name:</th>
+              <td>Harry Newman (veronin)</td>
+            </tr>
+            <tr>
+              <th align="left">Age:</th>
+              <td id="age"></td>
+            </tr>
+            <tr>
+              <th align="left">Type:</th>
+              <td>Software Developer</td>
+            </tr>
+            <tr>
+              <th align="left">Education:</th>
+              <td>
+                Studying BSc (Hons) Computer Science @
+                <a
+                  href="https://www.aston.ac.uk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Aston University
+                </a>
+              </td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </section>
 
-    <hr
-      style="border: none; height: 2px; background-color: white; margin: 20px 0"
-    />
+    <hr class="hr-style" />
 
     <section id="skills-section">
       <div class="skills">
         <table>
-          <th align="left" id="section-header">[002] Skills</th>
-          <tr>
-            <th align="left">Languages:</th>
-            <td>C, Python, JavaScript</td>
-          </tr>
-          <tr>
-            <th align="left">Systems:</th>
-            <td>Linux, Windows</td>
-          </tr>
-          <tr>
-            <th align="left">Tools:</th>
-            <td>Git, Clang, GCC, Make</td>
-          </tr>
+          <thead>
+            <tr>
+              <th align="left" id="section-header" colspan="2">[002] Skills</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th align="left">Languages:</th>
+              <td>C, Python, JavaScript</td>
+            </tr>
+            <tr>
+              <th align="left">Systems:</th>
+              <td>Linux, Windows</td>
+            </tr>
+            <tr>
+              <th align="left">Tools:</th>
+              <td>Git, Clang, GCC, Make</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <hr class="hr-style" />
+
+    <section id="certs-and-quals">
+      <div class="certs-and-quals">
+        <table>
+          <thead>
+            <tr>
+              <th align="left" id="section-header" colspan="2">
+                [004] Qualifications & Certifications
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CS50x: Introduction to Computer Science (Jun 2025)</td>
+              <td>
+                <a
+                  href="https://cs50.harvard.edu/certificates/35a8cf12-dc23-4e54-a55c-8a3bb1bfc179"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Credential
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>CS50P: Introduction to Programming with Python (May 2025)</td>
+              <td>
+                <a
+                  href="https://cs50.harvard.edu/certificates/bcf76528-c925-405f-8619-5b784f5fe685"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Credential</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Level 4 HNC Computing (Sep 2024 - Jun 2025)</td>
+              <td>Grade: Merit</td>
+            </tr>
+            <tr>
+              <td>Level 3 Diploma in Computing (Sep 2022 - Jun 2024)</td>
+              <td>Grade: D*D*D</td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </section>
 
     <script>
-      // Dynamically adjust .about age to current date - Dec 14, 2005
+      // Dynamically calculate age from Dec 14, 2005
       let birthday = new Date(2005, 11, 14);
       let currentDate = new Date();
       let age = currentDate.getFullYear() - birthday.getFullYear();
