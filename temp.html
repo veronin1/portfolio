@@ -103,24 +103,17 @@
 
       // timenow "command"
       function timeNow() {
-        let currentHours = new Date().getHours();
-        let currentMinutes = new Date().getMinutes();
-        let currentSeconds = new Date().getSeconds();
-        let am_pm = "AM";
+        const now = new Date();
 
-        // Infamous "American"
-        if (currentHours > 12) {
-          am_pm = "PM";
-        }
-
-        // Add padding
-        currentHours = currentHours.toString().padStart(2, "0");
-        currentMinutes = currentMinutes.toString().padStart(2, "0");
-        currentSeconds = currentSeconds.toString().padStart(2, "0");
+        // Get hours and add padding
+        const hours = now.getHours().toString().padStart(2, "0");
+        const minutes = now.getMinutes().toString().padStart(2, "0");
+        const seconds = now.getSeconds().toString().padStart(2, "0");
+        const am_pm = now.getHours() >= 12 ? "PM" : "AM";
 
         const timeNowElement = document.querySelector("#timenow");
         if (timeNowElement) {
-          timeNowElement.textContent = `${currentHours}:${currentMinutes}:${currentSeconds} ${am_pm}`;
+          timeNowElement.textContent = `${hours}:${minutes}:${seconds} ${am_pm}`;
         }
       }
 
