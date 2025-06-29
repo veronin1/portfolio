@@ -4,12 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>veronin.dev</title>
-
     <style>
       html {
         font-family: "Inter", monospace;
-        color: white;
-        background-color: black;
+        color: #00ff00;
+        background-color: #000000;
       }
 
       body {
@@ -18,7 +17,6 @@
         max-width: 800px;
       }
 
-      /* Style for links */
       a,
       a:visited {
         color: #00aaff;
@@ -28,7 +26,7 @@
       .hr-style {
         border: none;
         height: 2px;
-        background-color: white;
+        background-color: #00ff00;
         margin: 20px 0;
         border-radius: 9999px;
       }
@@ -45,7 +43,6 @@
         text-align: left;
         vertical-align: top;
       }
-
       .section-header {
         font-size: 1.2em;
         padding-bottom: 10px;
@@ -54,112 +51,60 @@
       tbody tr th:first-child {
         width: 15%;
       }
-    </style>
-  </head>
-  <body>
-    <nav
-      id="navbar"
-      style="
+
+      #navbar {
         max-width: 800px;
         margin: 0 auto 20px;
         padding: 0 20px;
-        font-family: 'Inter', monospace;
-        color: white;
+        font-family: "Inter", monospace;
+        color: #00ff00; /* Green text */
         text-align: left;
-      "
-    >
-      <a
-        href="#about-section"
-        style="
-          display: flex;
-          justify-content: space-between;
-          margin: 8px 0;
-          color: #00aaff;
-          text-decoration: underline;
-          font-family: monospace;
-        "
-      >
+      }
+
+      #navbar a {
+        display: flex;
+        justify-content: space-between;
+        margin: 8px 0;
+        color: #00aaff;
+        text-decoration: underline;
+        font-family: monospace;
+      }
+
+      #navbar a span:nth-child(2) {
+        flex-grow: 1;
+        border-bottom: 1px dashed #00aaff;
+        margin: 0 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="navbar">
+      <a href="#about-section">
         <span>About</span>
-        <span
-          style="flex-grow: 1; border-bottom: 1px dashed #00aaff; margin: 0 8px"
-        ></span>
+        <span></span>
         <span>[001]</span>
       </a>
-
-      <a
-        href="#skills-section"
-        style="
-          display: flex;
-          justify-content: space-between;
-          margin: 8px 0;
-          color: #00aaff;
-          text-decoration: underline;
-          font-family: monospace;
-        "
-      >
+      <a href="#skills-section">
         <span>Skills</span>
-        <span
-          style="flex-grow: 1; border-bottom: 1px dashed #00aaff; margin: 0 8px"
-        ></span>
+        <span></span>
         <span>[002]</span>
       </a>
-
-      <a
-        href="#projects-section"
-        style="
-          display: flex;
-          justify-content: space-between;
-          margin: 8px 0;
-          color: #00aaff;
-          text-decoration: underline;
-          font-family: monospace;
-        "
-      >
+      <a href="#projects-section">
         <span>Projects</span>
-        <span
-          style="flex-grow: 1; border-bottom: 1px dashed #00aaff; margin: 0 8px"
-        ></span>
+        <span></span>
         <span>[003]</span>
       </a>
-
-      <a
-        href="#certs-section"
-        style="
-          display: flex;
-          justify-content: space-between;
-          margin: 8px 0;
-          color: #00aaff;
-          text-decoration: underline;
-          font-family: monospace;
-        "
-      >
+      <a href="#certs-section">
         <span>Certifications</span>
-        <span
-          style="flex-grow: 1; border-bottom: 1px dashed #00aaff; margin: 0 8px"
-        ></span>
+        <span></span>
         <span>[004]</span>
       </a>
-
-      <a
-        href="#contact-section"
-        style="
-          display: flex;
-          justify-content: space-between;
-          margin: 8px 0;
-          color: #00aaff;
-          text-decoration: underline;
-          font-family: monospace;
-        "
-      >
+      <a href="#contact-section">
         <span>Contact</span>
-        <span
-          style="flex-grow: 1; border-bottom: 1px dashed #00aaff; margin: 0 8px"
-        ></span>
+        <span></span>
         <span>[005]</span>
       </a>
     </nav>
-
-    <!-- About Section: Contains personal information -->
     <section id="about-section">
       <div class="about">
         <table>
@@ -176,7 +121,6 @@
             <tr>
               <th>Age:</th>
               <td id="age"></td>
-              <!-- Age will be auto calculated from javascript -->
             </tr>
             <tr>
               <th>Type:</th>
@@ -199,10 +143,7 @@
         </table>
       </div>
     </section>
-
     <hr class="hr-style" />
-
-    <!-- Skills Section: Lists programming languages, systems, and tools -->
     <section id="skills-section">
       <div class="skills">
         <table>
@@ -228,10 +169,7 @@
         </table>
       </div>
     </section>
-
     <hr class="hr-style" />
-
-    <!-- Projects Section: Showcases personal projects with links-->
     <section id="projects-section">
       <div class="projects">
         <table>
@@ -275,10 +213,7 @@
         </table>
       </div>
     </section>
-
     <hr class="hr-style" />
-
-    <!-- Qualifications & Certifications Section: Lists academic and professional qualifications -->
     <section id="certs-section">
       <div class="certs-and-quals">
         <table>
@@ -325,10 +260,7 @@
         </table>
       </div>
     </section>
-
     <hr class="hr-style" />
-
-    <!-- Contact Section: Provides contact information -->
     <section id="contact-section">
       <div class="contact">
         <table>
@@ -362,18 +294,14 @@
         </table>
       </div>
     </section>
-
     <hr class="hr-style" />
     <footer id="footer"></footer>
-
     <script>
       // Dynamically calculate age from a birth date (December 14, 2005)
       document.addEventListener("DOMContentLoaded", () => {
         const birthday = new Date(2005, 11, 14);
         const currentDate = new Date();
-
         let age = currentDate.getFullYear() - birthday.getFullYear();
-
         if (
           currentDate.getMonth() < birthday.getMonth() ||
           (currentDate.getMonth() === birthday.getMonth() &&
@@ -381,13 +309,11 @@
         ) {
           age--;
         }
-
         // Update age
         const ageElement = document.querySelector("#age");
         if (ageElement) {
           ageElement.textContent = age;
         }
-
         // Update footer to current year
         const footerElement = document.querySelector("#footer");
         if (footerElement) {
