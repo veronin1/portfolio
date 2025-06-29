@@ -6,7 +6,7 @@
     <title>veronin.dev</title>
     <style>
       html {
-        font-family: "Inter", monospace;
+        font-family: monospace;
         color: #00ff00;
         background-color: #000000;
       }
@@ -19,7 +19,7 @@
 
       a,
       a:visited {
-        color: #00aaff;
+        color: #00aaff; /* Default link color for other parts of the site */
         text-decoration: underline;
       }
 
@@ -56,24 +56,33 @@
         max-width: 800px;
         margin: 0 auto 20px;
         padding: 0 20px;
-        font-family: "Inter", monospace;
-        color: #00ff00; /* Green text */
+        font-family: monospace;
+        color: #00ff00;
         text-align: left;
+        font-size: 1.1em;
       }
 
       #navbar a {
         display: flex;
         justify-content: space-between;
         margin: 8px 0;
-        color: #00aaff;
+        color: #00ff00;
+        text-decoration: none;
+      }
+
+      #navbar a:hover {
         text-decoration: underline;
-        font-family: monospace;
       }
 
       #navbar a span:nth-child(2) {
         flex-grow: 1;
-        border-bottom: 1px dashed #00aaff;
+        border-bottom: 1px dashed #ff00ff;
         margin: 0 8px;
+      }
+
+      #navbar a span:nth-child(3) {
+        color: #00aaff;
+        text-decoration: underline;
       }
     </style>
   </head>
