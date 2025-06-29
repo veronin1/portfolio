@@ -150,7 +150,7 @@
                 </a>
               </td>
               <td>
-                - A simple command-line compressor and decompressor using run
+                A simple command-line compressor and decompressor using run
                 length encoding and huffman coding
               </td>
             </tr>
@@ -165,7 +165,7 @@
                 </a>
               </td>
               <td>
-                - A comprehensive and personal collection of data structures and
+                A comprehensive and personal collection of data structures and
                 algorithms implementations for my learning
               </td>
             </tr>
@@ -261,6 +261,9 @@
       </div>
     </section>
 
+    <hr class="hr-style" />
+    <footer id="footer"></footer>
+
     <script>
       // Dynamically calculate age from a birth date (December 14, 2005)
       document.addEventListener("DOMContentLoaded", () => {
@@ -277,9 +280,16 @@
           age--;
         }
 
+        // Update age
         const ageElement = document.querySelector("#age");
         if (ageElement) {
           ageElement.textContent = age;
+        }
+
+        // Update footer to current year
+        const footerElement = document.querySelector("#footer");
+        if (footerElement) {
+          footerElement.textContent = `Harry Newman - ${currentDate.getFullYear()}`;
         }
       });
     </script>
