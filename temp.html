@@ -31,7 +31,7 @@
       }
 
       .prompt {
-        color: #f92672;
+        color: #66d9ef;
       }
     </style>
   </head>
@@ -45,7 +45,7 @@
     <span>C, Python, JavaScript, Git, Linux</span><br /><br />
 
     <span class="prompt">&gt;</span> <span class="command">projects</span><br />
-    <span>- boots: CLI compressor and decompressor</span><br />
+    <span>- <a href="https://github.com/veronin1/boots/" target="_blank" rel="noopener noreferrer">boots</a CLI compressor and decompressor</span><br />
     <span>- dsa: Data structures &amp; algorithms implementations</span
     ><br /><br />
 
@@ -101,16 +101,19 @@
         }
       });
 
+      // timenow "command"
       function timeNow() {
         let currentHours = new Date().getHours();
         let currentMinutes = new Date().getMinutes();
         let currentSeconds = new Date().getSeconds();
         let am_pm = "AM";
 
+        // Infamous "American"
         if (currentHours > 12) {
           am_pm = "PM";
         }
 
+        // Add padding
         currentHours = currentHours.toString().padStart(2, "0");
         currentMinutes = currentMinutes.toString().padStart(2, "0");
         currentSeconds = currentSeconds.toString().padStart(2, "0");
@@ -121,6 +124,7 @@
         }
       }
 
+      // call timenow and update it every 1 second
       timeNow();
       setInterval(timeNow, 1000);
     </script>
