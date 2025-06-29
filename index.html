@@ -7,7 +7,7 @@
     <style>
       html {
         font-family: monospace;
-        color: #00ff00;
+        color: #fff;
         background-color: #000000;
       }
 
@@ -19,22 +19,24 @@
 
       a,
       a:visited {
-        color: #00aaff; /* Default link color for other parts of the site */
+        color: #00aaff;
         text-decoration: underline;
       }
 
-      .hr-style {
+      a:hover {
+        text-decoration: none;
+      }
+
+      hr {
         border: none;
         height: 2px;
-        background-color: #00ff00;
+        background-color: #fff;
         margin: 20px 0;
-        border-radius: 9999px;
       }
 
       table {
         width: 100%;
         border-collapse: collapse;
-        table-layout: fixed;
       }
 
       th,
@@ -43,45 +45,29 @@
         text-align: left;
         vertical-align: top;
       }
+
       .section-header {
         font-size: 1.2em;
         padding-bottom: 10px;
       }
 
-      tbody tr th:first-child {
-        width: 15%;
-      }
-
       #navbar {
         max-width: 800px;
         margin: 0 auto 20px;
-        padding: 0 20px;
+        padding: 0 0;
         font-family: monospace;
-        color: #00ff00;
-        text-align: left;
+        color: #fff;
         font-size: 1.1em;
       }
 
       #navbar a {
-        display: flex;
-        justify-content: space-between;
-        margin: 8px 0;
-        color: #00ff00;
+        display: block;
+        margin: 6px 0;
+        color: #fff;
         text-decoration: none;
       }
 
       #navbar a:hover {
-        text-decoration: underline;
-      }
-
-      #navbar a span:nth-child(2) {
-        flex-grow: 1;
-        border-bottom: 1px dashed #ff00ff;
-        margin: 0 8px;
-      }
-
-      #navbar a span:nth-child(3) {
-        color: #00aaff;
         text-decoration: underline;
       }
     </style>
@@ -114,6 +100,7 @@
         <span>[005]</span>
       </a>
     </nav>
+    <hr class="hr-style" />
     <section id="about-section">
       <div class="about">
         <table>
@@ -199,7 +186,7 @@
                 </a>
               </td>
               <td>
-                A simple command-line compressor and decompressor using run
+                - A simple command-line compressor and decompressor using run
                 length encoding and huffman coding
               </td>
             </tr>
@@ -214,7 +201,7 @@
                 </a>
               </td>
               <td>
-                A comprehensive and personal collection of data structures and
+                - A comprehensive and personal collection of data structures and
                 algorithms implementations for my learning
               </td>
             </tr>
