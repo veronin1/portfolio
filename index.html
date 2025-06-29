@@ -2,296 +2,98 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>veronin.dev</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>veronin.dev - Harry Newman</title>
     <style>
-      html {
-        font-family: monospace;
-        color: #fff;
-        background-color: #000000;
-      }
-
       body {
-        margin: 0 auto;
-        padding: 20px;
-        max-width: 800px;
+        background-color: #1e1e2e;
+        color: #a6e22e;
+        font-family: "Courier New", Courier, monospace;
+        padding: 2rem;
+        max-width: 640px;
+        margin: 2rem auto;
+        line-height: 1.5;
+        white-space: pre-wrap;
       }
 
-      a,
-      a:visited {
-        color: #00aaff;
+      a {
+        color: #66d9ef;
         text-decoration: underline;
       }
 
       a:hover {
+        color: #a6e22e;
         text-decoration: none;
       }
 
-      hr {
-        border: none;
-        height: 2px;
-        background-color: #fff;
-        margin: 20px 0;
+      .command {
+        color: #66d9ef;
       }
 
-      table {
-        width: 100%;
-        border-collapse: collapse;
-      }
-
-      th,
-      td {
-        padding: 8px 0;
-        text-align: left;
-        vertical-align: top;
-      }
-
-      .section-header {
-        font-size: 1.2em;
-        padding-bottom: 10px;
-      }
-
-      #navbar {
-        max-width: 800px;
-        margin: 0 auto 20px;
-        padding: 0 0;
-        font-family: monospace;
-        color: #fff;
-        font-size: 1.1em;
-      }
-
-      #navbar a {
-        display: block;
-        margin: 6px 0;
-        color: #fff;
-        text-decoration: none;
-      }
-
-      #navbar a:hover {
-        text-decoration: underline;
+      .prompt {
+        color: #66d9ef;
       }
     </style>
   </head>
   <body>
-    <nav id="navbar">
-      <a href="#about-section">
-        <span>About</span>
-        <span></span>
-        <span>[001]</span>
-      </a>
-      <a href="#skills-section">
-        <span>Skills</span>
-        <span></span>
-        <span>[002]</span>
-      </a>
-      <a href="#projects-section">
-        <span>Projects</span>
-        <span></span>
-        <span>[003]</span>
-      </a>
-      <a href="#certs-section">
-        <span>Certifications</span>
-        <span></span>
-        <span>[004]</span>
-      </a>
-      <a href="#contact-section">
-        <span>Contact</span>
-        <span></span>
-        <span>[005]</span>
-      </a>
-    </nav>
-    <hr class="hr-style" />
-    <section id="about-section">
-      <div class="about">
-        <table>
-          <thead>
-            <tr>
-              <th class="section-header" colspan="2">[001] About</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Name:</th>
-              <td>Harry Newman (veronin)</td>
-            </tr>
-            <tr>
-              <th>Age:</th>
-              <td id="age"></td>
-            </tr>
-            <tr>
-              <th>Type:</th>
-              <td>Software Developer</td>
-            </tr>
-            <tr>
-              <th>Education:</th>
-              <td>
-                Studying BSc (Hons) Computer Science @
-                <a
-                  href="https://www.aston.ac.uk/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Aston University
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-    <hr class="hr-style" />
-    <section id="skills-section">
-      <div class="skills">
-        <table>
-          <thead>
-            <tr>
-              <th class="section-header" colspan="2">[002] Skills</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Languages:</th>
-              <td>C, Python, JavaScript</td>
-            </tr>
-            <tr>
-              <th>Systems:</th>
-              <td>Linux, Windows</td>
-            </tr>
-            <tr>
-              <th>Tools:</th>
-              <td>Git, Clang, GCC, Make</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-    <hr class="hr-style" />
-    <section id="projects-section">
-      <div class="projects">
-        <table>
-          <thead>
-            <tr>
-              <th class="section-header" colspan="2">[003] Projects</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <a
-                  href="https://github.com/veronin1/boots"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  boots
-                </a>
-              </td>
-              <td>
-                - A simple command-line compressor and decompressor using run
-                length encoding and huffman coding
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <a
-                  href="https://github.com/veronin1/dsa"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  dsa
-                </a>
-              </td>
-              <td>
-                - A comprehensive and personal collection of data structures and
-                algorithms implementations for my learning
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-    <hr class="hr-style" />
-    <section id="certs-section">
-      <div class="certs-and-quals">
-        <table>
-          <thead>
-            <tr>
-              <th class="section-header" colspan="2">
-                [004] Qualifications & Certifications
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>CS50x: Introduction to Computer Science (Jun 2025)</td>
-              <td>
-                <a
-                  href="https://cs50.harvard.edu/certificates/35a8cf12-dc23-4e54-a55c-8a3bb1bfc179"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Credential
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td>CS50P: Introduction to Programming with Python (May 2025)</td>
-              <td>
-                <a
-                  href="https://cs50.harvard.edu/certificates/bcf76528-c925-405f-8619-5b784f5fe685"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Credential</a
-                >
-              </td>
-            </tr>
-            <tr>
-              <td>Level 4 HNC Computing (Sep 2024 - Jun 2025)</td>
-              <td>Grade: Merit</td>
-            </tr>
-            <tr>
-              <td>Level 3 Diploma in Computing (Sep 2022 - Jun 2024)</td>
-              <td>Grade: D*D*D</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-    <hr class="hr-style" />
-    <section id="contact-section">
-      <div class="contact">
-        <table>
-          <thead>
-            <tr>
-              <th class="section-header" colspan="2">[005] Contact</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>EMAIL:</th>
-              <td>
-                <a href="mailto:h.newman2005@outlook.com"
-                  >h.newman2005@outlook.com</a
-                >
-              </td>
-            </tr>
-            <tr>
-              <th>GIT:</th>
-              <td>
-                <a href="https://github.com/veronin1"
-                  >https://github.com/veronin1</a
-                >
-              </td>
-            </tr>
-            <tr>
-              <th>WEB:</th>
-              <td><a href="https://veronin.dev">https://veronin.dev</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-    <hr class="hr-style" />
-    <footer id="footer"></footer>
+    <span class="prompt">&gt;</span> <span class="command">whoami</span><br />
+    <span>Harry Newman (veronin) - Software Developer</span><br />
+    <span id="age"></span><br />
+
+    <span class="prompt">&gt;</span> <span class="command">skills --list</span
+    ><br />
+    <span>C, Python, JavaScript, Git, Linux</span><br /><br />
+
+    <span class="prompt">&gt;</span> <span class="command">projects</span><br />
+    <span
+      ><a
+        href="https://github.com/veronin1/boots/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >boots</a
+      >: CLI compressor and decompressor</span
+    ><br />
+    <span
+      ><a
+        href="https://github.com/veronin1/dsa"
+        target="_blank"
+        rel="noopener noreferrer"
+        >dsa</a
+      >: Data structures &amp; algorithms implementations</span
+    ><br /><br />
+
+    <span class="prompt">&gt;</span> <span class="command">certifications</span
+    ><br />
+    <span>- CS50x: Introduction to Computer Science (Jun 2025)</span><br />
+    <span>- CS50P: Introduction to Programming with Python (May 2025)</span
+    ><br /><br />
+
+    <span class="prompt">&gt;</span> <span class="command">contact</span><br />
+    <span
+      >Email:
+      <a href="mailto:h.newman2005@outlook.com"
+        >h.newman2005@outlook.com</a
+      ></span
+    ><br />
+    <span
+      >GitHub:
+      <a
+        href="https://github.com/veronin1"
+        target="_blank"
+        rel="noopener noreferrer"
+        >github.com/veronin1</a
+      ></span
+    ><br />
+    <span
+      >Website:
+      <a href="https://veronin.dev" target="_blank" rel="noopener noreferrer"
+        >veronin.dev</a
+      ></span
+    ><br />
+
+    <span class="prompt">&gt;</span> <span class="command">timenow</span><br />
+    <span id="timenow"></span>
+
     <script>
       // Dynamically calculate age from a birth date (December 14, 2005)
       document.addEventListener("DOMContentLoaded", () => {
@@ -308,14 +110,29 @@
         // Update age
         const ageElement = document.querySelector("#age");
         if (ageElement) {
-          ageElement.textContent = age;
-        }
-        // Update footer to current year
-        const footerElement = document.querySelector("#footer");
-        if (footerElement) {
-          footerElement.textContent = `Harry Newman - ${currentDate.getFullYear()}`;
+          ageElement.textContent = `Age - ${age}`;
         }
       });
+
+      // timenow "command"
+      function timeNow() {
+        const now = new Date();
+
+        // Get hours and add padding
+        const hours = now.getHours().toString().padStart(2, "0");
+        const minutes = now.getMinutes().toString().padStart(2, "0");
+        const seconds = now.getSeconds().toString().padStart(2, "0");
+        const am_pm = now.getHours() >= 12 ? "PM" : "AM";
+
+        const timeNowElement = document.querySelector("#timenow");
+        if (timeNowElement) {
+          timeNowElement.textContent = `${hours}:${minutes}:${seconds} ${am_pm}`;
+        }
+      }
+
+      // call timenow and update it every 1 second
+      timeNow();
+      setInterval(timeNow, 1000);
     </script>
   </body>
 </html>
