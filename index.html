@@ -7,11 +7,18 @@
 
     <style>
       html {
-        font-family: monospace;
+        font-family: "Inter", monospace;
         color: white;
         background-color: black;
       }
 
+      body {
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 800px;
+      }
+
+      /* Style for links */
       a,
       a:visited {
         color: #00aaff;
@@ -23,33 +30,58 @@
         height: 2px;
         background-color: white;
         margin: 20px 0;
+        border-radius: 9999px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+      }
+
+      th,
+      td {
+        padding: 8px 0;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .section-header {
+        font-size: 1.2em;
+        padding-bottom: 10px;
+      }
+
+      tbody tr th:first-child {
+        width: 15%;
       }
     </style>
   </head>
   <body>
+    <!-- About Section: Contains personal information -->
     <section id="about-section">
       <div class="about">
         <table>
           <thead>
             <tr>
-              <th align="left" id="section-header">[001] About</th>
+              <th class="section-header" colspan="2">[001] About</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th align="left">Name:</th>
+              <th>Name:</th>
               <td>Harry Newman (veronin)</td>
             </tr>
             <tr>
-              <th align="left">Age:</th>
+              <th>Age:</th>
               <td id="age"></td>
+              <!-- Age will be auto calculated from javascript -->
             </tr>
             <tr>
-              <th align="left">Type:</th>
+              <th>Type:</th>
               <td>Software Developer</td>
             </tr>
             <tr>
-              <th align="left">Education:</th>
+              <th>Education:</th>
               <td>
                 Studying BSc (Hons) Computer Science @
                 <a
@@ -68,25 +100,26 @@
 
     <hr class="hr-style" />
 
+    <!-- Skills Section: Lists programming languages, systems, and tools -->
     <section id="skills-section">
       <div class="skills">
         <table>
           <thead>
             <tr>
-              <th align="left" id="section-header" colspan="2">[002] Skills</th>
+              <th class="section-header" colspan="2">[002] Skills</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th align="left">Languages:</th>
+              <th>Languages:</th>
               <td>C, Python, JavaScript</td>
             </tr>
             <tr>
-              <th align="left">Systems:</th>
+              <th>Systems:</th>
               <td>Linux, Windows</td>
             </tr>
             <tr>
-              <th align="left">Tools:</th>
+              <th>Tools:</th>
               <td>Git, Clang, GCC, Make</td>
             </tr>
           </tbody>
@@ -96,14 +129,13 @@
 
     <hr class="hr-style" />
 
+    <!-- Projects Section: Showcases personal projects with links-->
     <section id="projects-section">
       <div class="projects">
         <table>
           <thead>
             <tr>
-              <th align="left" id="section-header" colspan="2">
-                [003] Projects
-              </th>
+              <th class="section-header" colspan="2">[003] Projects</th>
             </tr>
           </thead>
           <tbody>
@@ -144,12 +176,13 @@
 
     <hr class="hr-style" />
 
+    <!-- Qualifications & Certifications Section: Lists academic and professional qualifications -->
     <section id="certs-section">
       <div class="certs-and-quals">
         <table>
           <thead>
             <tr>
-              <th align="left" id="section-header" colspan="2">
+              <th class="section-header" colspan="2">
                 [004] Qualifications & Certifications
               </th>
             </tr>
@@ -193,19 +226,18 @@
 
     <hr class="hr-style" />
 
+    <!-- Contact Section: Provides contact information -->
     <section id="contact-section">
       <div class="contact">
         <table>
           <thead>
             <tr>
-              <th align="left" id="section-header" colspan="2">
-                [005] Contact
-              </th>
+              <th class="section-header" colspan="2">[005] Contact</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th align="left">EMAIL:</th>
+              <th>EMAIL:</th>
               <td>
                 <a href="mailto:h.newman2005@outlook.com"
                   >h.newman2005@outlook.com</a
@@ -213,7 +245,7 @@
               </td>
             </tr>
             <tr>
-              <th align="left">GIT:</th>
+              <th>GIT:</th>
               <td>
                 <a href="https://github.com/veronin1"
                   >https://github.com/veronin1</a
@@ -221,7 +253,7 @@
               </td>
             </tr>
             <tr>
-              <th align="left">WEB:</th>
+              <th>WEB:</th>
               <td><a href="https://veronin.dev">https://veronin.dev</a></td>
             </tr>
           </tbody>
@@ -230,20 +262,26 @@
     </section>
 
     <script>
-      // Dynamically calculate age from Dec 14, 2005
-      let birthday = new Date(2005, 11, 14);
-      let currentDate = new Date();
-      let age = currentDate.getFullYear() - birthday.getFullYear();
+      // Dynamically calculate age from a birth date (December 14, 2005)
+      document.addEventListener("DOMContentLoaded", () => {
+        const birthday = new Date(2005, 11, 14);
+        const currentDate = new Date();
 
-      if (
-        currentDate.getMonth() < birthday.getMonth() ||
-        (currentDate.getMonth() === birthday.getMonth() &&
-          currentDate.getDate() < birthday.getDate())
-      ) {
-        age--;
-      }
+        let age = currentDate.getFullYear() - birthday.getFullYear();
 
-      document.querySelector("#age").textContent = age;
+        if (
+          currentDate.getMonth() < birthday.getMonth() ||
+          (currentDate.getMonth() === birthday.getMonth() &&
+            currentDate.getDate() < birthday.getDate())
+        ) {
+          age--;
+        }
+
+        const ageElement = document.querySelector("#age");
+        if (ageElement) {
+          ageElement.textContent = age;
+        }
+      });
     </script>
   </body>
 </html>
