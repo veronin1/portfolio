@@ -14,6 +14,7 @@
         margin: 2rem auto;
         line-height: 1.5;
         white-space: pre-wrap;
+        font-size: 1rem;
       }
 
       a {
@@ -46,6 +47,32 @@
       .prompt {
         color: #66d9ef;
       }
+
+      /* "Mobile Friendly" */
+      @media (max-width: 400px) {
+      body {
+        padding: 1rem;
+        font-size: 0.9rem;
+        max-width: 100%;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      nav span {
+        white-space: normal;
+        word-break: break-word;
+      }
+
+      a, a.command {
+        white-space: normal;
+        word-break: break-word;
+      }
+    }
     </style>
   </head>
   <body>
@@ -57,7 +84,7 @@
     <span><a href="#certifications">certifications</a></span>
     <span><a href="#education">education</a></span>
     <span><a href="#contact">contact</a></span>
-
+    
     <!--About-->
     <span class="prompt">&gt;</span> <a href="#whoami" class="command" id="whoami">whoami</a><br />
     <span>Harry Newman (veronin): Software Developer</span><br />
