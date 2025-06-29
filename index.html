@@ -27,6 +27,18 @@
         text-decoration: none;
       }
 
+      a.command {
+        color: #66d9ef;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      a.command:hover {
+        color: #a6e22e;
+        text-decoration: none;
+
+      }
+
       .command {
         color: #66d9ef;
       }
@@ -38,8 +50,8 @@
   </head>
   <body>
     <!--Navbar-->
-    <span class="prompt">&gt;</span> <span class="command">index</span><br />
-    <span><a href="#about">whoami</a></span>
+    <span class="prompt">&gt;</span> <a href="#index" class="command" id="index">index</a><br />
+    <span><a href="#whoami">whoami</a></span>
     <span><a href="#skills">skills</a></span>
     <span><a href="#projects">projects</a></span>
     <span><a href="#certifications">certifications</a></span>
@@ -47,42 +59,39 @@
     <span><a href="#contact">contact</a></span>
 
     <!--About-->
-    <span class="prompt">&gt;</span> <span class="command" id="whoami">whoami</span><br />
+    <span class="prompt">&gt;</span> <a href="#whoami" class="command" id="whoami">whoami</a><br />
     <span>Harry Newman (veronin): Software Developer</span><br />
     <span id="age"></span><br />
 
     <!--Skills-->
-    <span class="prompt">&gt;</span> <span class="command" id="skills">skills --list</span><br />
+    <span class="prompt">&gt;</span> <a href="#skills" class="command" id="skills">skills --list</a><br />
     <span>C, Python, JavaScript, Git, Linux</span><br /><br />
 
     <!--Projects-->
-    <span class="prompt">&gt;</span> <span class="command" id="projects">projects</span><br />
+    <span class="prompt">&gt;</span> <a href="#projects" class="command" id="projects">projects</a><br />
     <span><a href="https://github.com/veronin1/boots/" target="_blank" rel="noopener noreferrer">boots</a>: CLI compressor and decompressor</span><br />
     <span><a href="https://github.com/veronin1/dsa" target="_blank" rel="noopener noreferrer">dsa</a>: Data structures &amp; algorithms implementations</span><br /><br />
 
     <!--Certifications-->
-    <span class="prompt">&gt;</span> <span class="command" id="certifications">certifications</span><br />
+    <span class="prompt">&gt;</span> <a href="#certifications" class="command" id="certifications">certifications</a><br />
     <span>CS50x: Introduction to Computer Science (Jun 2025)</span><br />
-    <span>CS50P: Introduction to Programming with Python (May 2025)</span
-    ><br /><br />
+    <span>CS50P: Introduction to Programming with Python (May 2025)</span><br /><br />
 
     <!--Education-->
-    <span class="prompt">&gt;</span> <span class="command" id="education">education</span><br />
-    <span>BSc (Hons) Computer Science @ Aston University (Current)</span><br />
-    <span>Level 4 HNC Computing (Sep 2024 - Jun 2025): <b>Merit</b></span
-    ><br />
-    <span
-      >Level 3 Diploma in Computing (Sep 2022 - Jun 2024) - <b>D*D*D</b></span
-    ><br />
+    <span class="prompt">&gt;</span> <a href="#education" class="command" id="education">education</a><br />
+    <span>BSc (Hons) Computer Science @ <a href="https://www.aston.ac.uk/" target="_blank" rel="noopener noreferrer">Aston University</a> (Current)</span><br />
+    <span>Level 4 HNC Computing (Sep 2024 - Jun 2025): <b>Merit</b></span><br />
+    <span>Level 3 Diploma in Computing (Sep 2022 - Jun 2024) - <b>D*D*D</b></span><br />
 
     <!--Contact-->
-    <span class="prompt">&gt;</span> <span class="command" id="contact">contact</span><br />
+    <span class="prompt">&gt;</span> <a href="#contact" class="command" id="contact">contact</a><br />
     <span>Email: <a href="mailto:h.newman2005@outlook.com">h.newman2005@outlook.com</a></span><br />
     <span>GitHub: <a href="https://github.com/veronin1" target="_blank" rel="noopener noreferrer">github.com/veronin1</a></span><br />
     <span>Website: <a href="https://veronin.dev" target="_blank" rel="noopener noreferrer">veronin.dev</a></span><br />
 
-    <span class="prompt">&gt;</span> <span class="command">timenow</span><br />
+    <span class="prompt">&gt;</span> <a href="#timenow" class="command" id="timenow-command">timenow</a><br />
     <span id="timenow"></span>
+
 
     <script>
       // Dynamically calculate age from a birth date (December 14, 2005)
