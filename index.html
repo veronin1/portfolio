@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>veronin.dev</title>
     <style>
+    /* Dark theme */
     body {
       background-color: #282828;
       color: #ebdbb2;
@@ -47,6 +48,7 @@
       color: #d3869b;
     }
 
+    /* Mobile Friendly */
     @media (max-width: 400px) {
       body {
         padding: 1rem;
@@ -71,9 +73,36 @@
         word-break: break-word;
       }
     }
+
+    /* Light theme */
+    body.light {
+      background-color: #f0f0f0;
+      color: #3c3c3c;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    body.light a {
+      color: #268bd2;
+      text-decoration: underline;
+    }
+
+    body.light a:hover {
+      color: #b58900;
+      text-decoration: none;
+    }
+
+    body.light .command {
+      color: #b58900;
+    }
+
+    body.light .prompt {
+      color: #d33682;
+    }
   </style>
   </head>
   <body>
+    <span id="theme-toggle" style="cursor:pointer; text-decoration: underline; color: inherit; float: right;">toggle theme</span>
+
     <!--Navbar-->
     <span class="prompt">&gt;</span> <a href="#index" class="command" id="index">index</a><br />
     <span><a href="#whoami">whoami</a></span>
@@ -82,7 +111,7 @@
     <span><a href="#certifications">certifications</a></span>
     <span><a href="#education">education</a></span>
     <span><a href="#contact">contact</a></span>
-    
+
     <!--About-->
     <span class="prompt">&gt;</span> <a href="#whoami" class="command" id="whoami">whoami</a><br />
     <span>Harry Newman (veronin): Software Developer</span><br />
@@ -91,7 +120,7 @@
     <!--Skills-->
     <span class="prompt">&gt;</span> <a href="#skills" class="command" id="skills">skills --list</a><br />
     <span><b>langs:</b> C, Python, JavaScript, SQL</span><br />
-    <span><b>tools:</b> Git, GitHub, Flask, SQLite</span><br />
+    <span><b>tools:</b> <abbr title="Version Control">Git</abbr>, GitHub, Flask, SQLite, VS Code</span><br />
     <span><b>systems:</b> Linux, Valgrind</span><br />
 
 
@@ -122,6 +151,14 @@
 
 
     <script>
+      // change theme colour
+      const themeToggle = document.querySelector("#theme-toggle");
+      if (themeToggle) {
+        themeToggle.addEventListener("click", () => {
+          document.body.classList.toggle("light");
+        });
+      }
+
       // Dynamically calculate age from a birth date (December 14, 2005)
       document.addEventListener("DOMContentLoaded", () => {
         const birthday = new Date(2005, 11, 14);
