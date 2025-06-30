@@ -16,6 +16,7 @@
       line-height: 1.6;
       white-space: pre-wrap;
       font-size: 1rem;
+      transition: background-color 0.2s ease, color 0.2s ease;
     }
 
     a {
@@ -151,52 +152,52 @@
 
 
     <script>
-      // change theme colour
-      const themeToggle = document.querySelector("#theme-toggle");
-      if (themeToggle) {
-        themeToggle.addEventListener("click", () => {
-          document.body.classList.toggle("light");
-        });
-      }
-
-      // Dynamically calculate age from a birth date (December 14, 2005)
-      document.addEventListener("DOMContentLoaded", () => {
-        const birthday = new Date(2005, 11, 14);
-        const currentDate = new Date();
-        let age = currentDate.getFullYear() - birthday.getFullYear();
-        if (
-          currentDate.getMonth() < birthday.getMonth() ||
-          (currentDate.getMonth() === birthday.getMonth() &&
-            currentDate.getDate() < birthday.getDate())
-        ) {
-          age--;
-        }
-        // Update age
-        const ageElement = document.querySelector("#age");
-        if (ageElement) {
-          ageElement.textContent = `Age: ${age}`;
-        }
+    // change theme colour
+    const themeToggle = document.querySelector("#theme-toggle");
+    if (themeToggle) {
+      themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("light");
       });
+    }
 
-      // timenow "command"
-      function timeNow() {
-        const now = new Date();
-
-        // Get hours and add padding
-        const hours = now.getHours().toString().padStart(2, "0");
-        const minutes = now.getMinutes().toString().padStart(2, "0");
-        const seconds = now.getSeconds().toString().padStart(2, "0");
-        const am_pm = now.getHours() >= 12 ? "PM" : "AM";
-
-        const timeNowElement = document.querySelector("#timenow");
-        if (timeNowElement) {
-          timeNowElement.textContent = `${hours}:${minutes}:${seconds} ${am_pm}`;
-        }
+    // Dynamically calculate age from a birth date (December 14, 2005)
+    document.addEventListener("DOMContentLoaded", () => {
+      const birthday = new Date(2005, 11, 14);
+      const currentDate = new Date();
+      let age = currentDate.getFullYear() - birthday.getFullYear();
+      if (
+        currentDate.getMonth() < birthday.getMonth() ||
+        (currentDate.getMonth() === birthday.getMonth() &&
+          currentDate.getDate() < birthday.getDate())
+      ) {
+        age--;
       }
+      // Update age
+      const ageElement = document.querySelector("#age");
+      if (ageElement) {
+        ageElement.textContent = `Age: ${age}`;
+      }
+    });
 
-      // call timenow and update it every 1 second
-      timeNow();
-      setInterval(timeNow, 1000);
+    // timenow "command"
+    function timeNow() {
+      const now = new Date();
+
+      // Get hours and add padding
+      const hours = now.getHours().toString().padStart(2, "0");
+      const minutes = now.getMinutes().toString().padStart(2, "0");
+      const seconds = now.getSeconds().toString().padStart(2, "0");
+      const am_pm = now.getHours() >= 12 ? "PM" : "AM";
+
+      const timeNowElement = document.querySelector("#timenow");
+      if (timeNowElement) {
+        timeNowElement.textContent = `${hours}:${minutes}:${seconds} ${am_pm}`;
+      }
+    }
+
+    // call timenow and update it every 1 second
+    timeNow();
+    setInterval(timeNow, 1000);
     </script>
   </body>
 </html>
