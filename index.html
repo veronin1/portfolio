@@ -46,7 +46,14 @@
       color: #fabd2f;
     }
 
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
     .prompt {
+      animation: blink 1s step-start infinite;
+      display: inline-block;
       color: #d3869b;
     }
 
@@ -137,6 +144,7 @@
 
     <!--Projects-->
     <span class="prompt">&gt;</span> <a href="#projects" class="command" id="projects">projects</a><br />
+    <span><a href="https://github.com/veronin1/soniq/" target="_blank" rel="noopener noreferrer">soniq</a>: (C++) A command-line music player and real-time frequency visualizer powered by the <a href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform" target="_blank" rel="noopener noreferrer">Discrete Fourier Transform (DFT)</a> algorithm.</span><br />
     <span><a href="https://github.com/veronin1/cs50x-cpp/" target="_blank" rel="noopener noreferrer">cs50x-cpp</a>: (C++) CS50X C projects rewritten in C++</span><br />
     <span><a href="https://github.com/veronin1/boots/" target="_blank" rel="noopener noreferrer">boots</a>: (C) CLI compressor and decompressor</span><br />
     <span><a href="https://github.com/veronin1/dsa" target="_blank" rel="noopener noreferrer">dsa</a>: (C/C++/Python) Data structures &amp; algorithms implementations</span><br /><br />
